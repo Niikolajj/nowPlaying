@@ -1,0 +1,22 @@
+{
+  "name": "nowplaying",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@tailwindcss/forms": "^0.2.1",
+    "autoprefixer": "^10.0.2",
+    "postcss": "^8.1.9",
+    "tailwindcss": "^2.0.1"
+  },
+  "devDependencies": {
+    "onchange": "^7.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "tailwindcss build src/styles.css -o dist/styles.css",
+    "watch-css": "onchange \"src\" -- npm run build-css"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./styles.css" rel="stylesheet" />
+    <title>Last.FM Now Playing</title>
+  </head>
+  <body class="m-2">
+    <div class="settings flex flex-col items-start mb-2 hidden">
+      <label class="text-2xl py-1 px-3 bg-white toggle">
+        Settings
+      </label>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 space-x-2 mt-2 settings">
+        <div class="setting">
+          <div class="w-full">
+            <label class="text-lg  font-medium text-gray-900">
+              Username
+            </label>
+            <input type="text" id="username" class="px-2 py-1 my-1 focus:ring-grey-500 focus:border-grey-500 block w-full sm:text-sm border-gray-300 rounded-md">
+          </div>
+        </div>
+        <div class="setting">
+          <div class="w-full">
+            <label class="text-lg font-medium text-gray-900">
+              Refresh every X s
+            </label>
+            <input type="number" step=".25" id="polling" class="px-2 py-1 my-1 focus:ring-grey-500 focus:border-grey-500 block w-full sm:text-sm border-gray-300 rounded-md">
+          </div>
+        </div>
+      </div>
+      <div id="save" class="text-2xl py-1 px-3 bg-white mt-2">
+        Save
+      </div>
+    </div>
+
+    <div class="info flex flex-col items-start space-y-2 hidden toggle">
+      <span class="row py-1 px-3 title">
+        Now
+      </span>
+      <span class="row py-1 px-3 artist">
+        Playing
+      </span>
+      <span class="row py-1 px-4 status">
+        ♪
+      </span>
+    </div>
+  </body>
+  <script src="./dist/lastfm.js"></script>
+</html>
